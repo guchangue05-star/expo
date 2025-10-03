@@ -40,7 +40,8 @@ jobs:
         working_directory: ../..
         env:
           UPDATES_HOST: localhost
-          UPDATES_PORT: "4747"
+          EAS_BUILD_DISABLE_COCOAPODS_CACHE: 'true'
+          UPDATES_PORT: '4747'
         run: |
           yarn --silent ts-node --transpile-only ./packages/expo-updates/e2e/setup/create-error-recovery-eas-project.ts
           ls -la ../updates-e2e
@@ -76,7 +77,8 @@ jobs:
         working_directory: ../..
         env:
           UPDATES_HOST: localhost
-          UPDATES_PORT: "4747"
+          EAS_BUILD_DISABLE_COCOAPODS_CACHE: 'true'
+          UPDATES_PORT: '4747'
         run: |
           yarn --silent ts-node --transpile-only ./packages/expo-updates/e2e/setup/create-error-recovery-eas-project.ts
           ls -la ../updates-e2e
